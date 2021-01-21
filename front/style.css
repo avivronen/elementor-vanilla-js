@@ -1,0 +1,135 @@
+body {
+    font-family: arial;
+}
+
+.Content {
+    width: 90%;
+    margin: auto;
+}
+
+.Input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.Label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.InputElement {
+    outline: none;
+    border: 1px solid #ccc;
+    background-color: white;
+    font: inherit;
+    padding: 6px 10px;
+    margin-top: 3px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.InputElement:focus {
+    outline: none;
+    background-color: #ccc;
+}
+
+.Button {
+    background-color: #932df8;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    padding: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+/* table design based on https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l with my changes (Aviv) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+table thead tr {
+    background-color: #932df8;
+    color: #ffffff;
+    text-align: left;
+}
+
+table th,
+table td {
+    padding: 8px 5px;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #bababa;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type {
+    border-bottom: 2px solid #932df8;
+}
+
+table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+@media (max-width: 499px) {
+    table {
+        display:block !important;
+    }
+}
+
+
+/* Modal */
+.Modal {
+    position: fixed;
+    z-index: 500;
+    background-color: white;
+    width: 70%;
+    min-height: 50%;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px black;
+    padding: 16px;
+    left: 15%;
+    top: 25%;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+}
+
+@media (min-width: 600px) {
+    .Modal {
+        width: 500px;
+        left: calc(50% - 250px);
+    }
+}
+
+.Backdrop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 499px) {
+    .DesktopOnly {
+        display: none;
+    }
+}
+
